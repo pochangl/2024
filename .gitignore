@@ -1,3 +1,4 @@
 *.pyc
 .ipynb_checkpoints
 iframe_figures
+test/
