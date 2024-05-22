@@ -17,10 +17,10 @@ app.layout = [
 
 @app.callback(
     [
-        Input(component_id='btn', component_property='n_clicks')
+        Output(component_id="num_clicks", component_property='children'),
     ],
     [
-        Output(component_id="num_clicks", component_property='children'),
+        Input(component_id='btn', component_property='n_clicks')
     ],
 )
 def on_click(n_clicks):
