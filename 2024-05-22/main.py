@@ -6,9 +6,13 @@ from dash import Dash, html
 app = Dash()
 
 app.layout = [
-    html.P(children='共點 0 次'),
+    html.P(children='Hello world'),
+
     # 請加上按鈕
-    html.Button(children='點我')
+    html.Button(children='點我'),
+
+    # 加上點擊次數
+    html.P(children='己點擊 0 次'),
 ]
 
 app.run(debug=True)
