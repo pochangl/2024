@@ -2,3 +2,7 @@
 # 在網頁上顯示 Hello World
 
 from dash import Dash
+
+app = Dash()
+
+app.run()
