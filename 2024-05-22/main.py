@@ -17,11 +17,11 @@ app.layout = [
 
 @app.callback(
     [
-        Output(component_id="num_clicks", component_property='children'),
+        Input(component_id='btn', component_property='n_clicks')
     ],
     [
-        Input(component_id='btn', component_property='n_clicks')
-    ]
+        Output(component_id="num_clicks", component_property='children'),
+    ],
 )
 def on_click(n_clicks):
     return f'己點擊 {n_clicks} 次'
