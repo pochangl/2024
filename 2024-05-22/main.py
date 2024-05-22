@@ -5,4 +5,4 @@ from dash import Dash
 
 app = Dash()
 
-app.run()
+app.run(debug=True)
