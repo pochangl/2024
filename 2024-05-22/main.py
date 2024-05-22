@@ -5,4 +5,6 @@ from dash import Dash
 
 app = Dash()
 
+app.layout = []
+
 app.run(debug=True)
