@@ -11,8 +11,8 @@ app.layout = [
     dcc.Input(placeholder="請輸入 b", id="b_input", type="number", value=0),
 
     # 在頁面上顯示輸入的文字跟數字
-    html.P(children='您輸入的文字是: ', id='text_output'),
-    html.P(children='您輸入的數字是: ', id='number_output'),
+    html.P(children='您輸入的a是: ', id='a_output'),
+    html.P(children='您輸入的b是: ', id='b_output'),
 ]
 
 @app.callback(
