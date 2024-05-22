@@ -24,11 +24,11 @@ def on_text(text):
     return f'您輸入的文字是: {text}'
 
 @app.callback(
-    Output(component_id='text_output', component_property='children'),
-    Input(component_id='text_input', component_property='value'),
+    Output(component_id='number_output', component_property='children'),
+    Input(component_id='number_input', component_property='value'),
 )
-def on_text(text):
+def on_number(number):
 
-    return f'您輸入的文字是: {text}'
+    return f'您輸入的數字是: {number}'
 
 app.run(debug=True)
