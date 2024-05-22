@@ -17,9 +17,9 @@ app.layout = [
 
 @app.callback(
     Output(),
-    Input(component_id='text_input'),
+    Input(component_id='text_input', component_property='value'),
 )
-def on_text():
+def on_text(text):
 
     return f'您輸入的文字是: ${text}'
 
