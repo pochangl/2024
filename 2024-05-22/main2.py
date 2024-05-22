@@ -21,6 +21,6 @@ app.layout = [
 )
 def on_text(text):
 
-    return f'您輸入的文字是: ${text}'
+    return f'您輸入的文字是: {text}'
 
 app.run(debug=True)
