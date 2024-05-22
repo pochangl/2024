@@ -17,7 +17,7 @@ app.layout = [
 
 @app.callback(
     Output(),
-    Input(),
+    Input(component_id='text_input'),
 )
 def on_text():
 
