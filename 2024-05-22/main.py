@@ -11,7 +11,7 @@ app.layout = [
     # 請加上按鈕
     html.Button(children='點我'),
 
-    # 加上點擊次數
+    # 使用 callback, Input, Output 加上點擊次數
     html.P(children='己點擊 0 次'),
 ]
 
