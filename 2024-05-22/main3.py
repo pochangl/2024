@@ -18,7 +18,19 @@ app.layout = [
     # 在頁面上顯示輸入的文字跟數字
     html.P(children='您輸入的a是: ', id='a_output'),
     html.P(children='您輸入的b是: ', id='b_output'),
-    dcc.Graph(figure=px.line(x=x, y=y)),
+    dcc.Graph(id='graph', figure=px.line(x=x, y=y)),
 ]
+
+@app.callback(
+        Output(component_id='graph', component_property='figure'),
+        [
+            Input(component_id='a_input', component_property='value'),
+            Input(component_id='b_input', component_property='value'),
+        ]
+)
+def on_change(a, b):
+    x = np.arange(-5, 5)
+    y = a * x + b
+    return px.line(x=x, y=y)
 
 app.run(debug=True)
