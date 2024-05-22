@@ -24,6 +24,6 @@ app.layout = [
     ],
 )
 def on_click(n_clicks):
-    return f'己點擊 {n_clicks} 次'
+    return [f'己點擊 {n_clicks} 次']
 
 app.run(debug=True)
