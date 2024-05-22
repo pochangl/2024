@@ -23,6 +23,7 @@ def on_text(text):
 
     return f'您輸入的文字是: {text}'
 
+## 數字欄位的 callback
 @app.callback(
     Output(component_id='number_output', component_property='children'),
     Input(component_id='number_input', component_property='value'),
