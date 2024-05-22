@@ -11,12 +11,12 @@ app.layout = [
     dcc.Input(placeholder="請輸入數字", type="number"),
 
     # 在頁面上顯示輸入的文字跟數字
-    html.P('您輸入的文字是: '),
-    html.P('您輸入的數字是: '),
+    html.P(children='您輸入的文字是: ', id='text_output'),
+    html.P(children='您輸入的數字是: '),
 ]
 
 @app.callback(
-    Output(),
+    Output(component_id='text_output', component_property='children'),
     Input(component_id='text_input', component_property='value'),
 )
 def on_text(text):
