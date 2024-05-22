@@ -5,9 +5,6 @@ from dash import Dash, dcc, html, Input, Output
 import numpy as np
 import plotly.express as px
 
-x = np.arange(-5, 5)
-y = 2 * x + 3
-
 app = Dash()
 
 app.layout = [
@@ -18,7 +15,7 @@ app.layout = [
     # 在頁面上顯示輸入的文字跟數字
     html.P(children='您輸入的a是: ', id='a_output'),
     html.P(children='您輸入的b是: ', id='b_output'),
-    dcc.Graph(id='graph', figure=px.line(x=x, y=y)),
+    dcc.Graph(id='graph'),
 ]
 
 @app.callback(
