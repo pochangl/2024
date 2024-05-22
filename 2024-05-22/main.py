@@ -6,7 +6,7 @@ from dash import Dash, html
 app = Dash()
 
 app.layout = [
-    html.P(children='Hello world'),
+    html.P(children='共點 0 次'),
     # 請加上按鈕
     html.Button(children='點我')
 ]
