@@ -7,8 +7,8 @@ app = Dash()
 
 app.layout = [
     # 試著加入2個文字輸入框, 使用 dcc.Input
-    dcc.Input(placeholder="請輸入 a", id="a_input", type="number", value=0),
-    dcc.Input(placeholder="請輸入 b", id="b_input", type="number", value=0),
+    dcc.Input(placeholder="請輸入 a", id="a_input", type="number", value=2),
+    dcc.Input(placeholder="請輸入 b", id="b_input", type="number", value=3),
 
     # 在頁面上顯示輸入的文字跟數字
     html.P(children='您輸入的a是: ', id='a_output'),
