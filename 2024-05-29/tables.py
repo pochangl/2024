@@ -19,7 +19,7 @@ app.layout = [
             xs=6,
         ),
         dbc.Col(
-            style={'padding': '0'},
+            style={'padding': '20px'},
             children=dash_table.DataTable(data=orders.to_dict('records')),
             xs=6,
         ),
