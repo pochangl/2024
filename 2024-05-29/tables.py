@@ -3,6 +3,8 @@ from dash import Dash, html
 app = Dash()
 
 
-app.layout = []
+app.layout = [
+    html.Div(children='Hello world')
+]
 
-app.run()
+app.run(debug=True)
