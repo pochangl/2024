@@ -1,4 +1,4 @@
-from dash import Dash, html, dash_table, Input, Output
+from dash import Dash, html, dash_table, Input, Output, dcc
 import dash_bootstrap_components as dbc
 
 import pandas as pd
@@ -8,6 +8,7 @@ app = Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 app.layout = [
     dbc.Row(children=[
+        dcc.Dropdown(['New York City', 'Montréal', 'San Francisco'], 'Montréal', multi=True),
         dbc.Col(
             children=dash_table.DataTable(id='customers'),
         ),
