@@ -12,7 +12,7 @@ orders = pd.read_csv('orders.csv')
 
 app.layout = [
      dash_table.DataTable(data=customers.to_dict('records')),
-     
+     dash_table.DataTable(data=orders.to_dict('records')),
 ]
 
 app.run(debug=True)
