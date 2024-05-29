@@ -24,7 +24,7 @@ app.layout = [
         Output(component_id='orders', component_property='data'),
     ],
     [
-        Input(componnet_id='customers', component_property='style'),
+        Input(component_id='customers', component_property='style'),
     ]
 )
 def update():
