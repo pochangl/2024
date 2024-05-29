@@ -45,6 +45,7 @@ def update(last_name):
 
     groups = filtered_orders.groupby('customer_id').size().reset_index()
     groups.columns = ['customer_id', 'count']
+    order_count = pd.merge(left=groups, right=all_customers, on='customer_id')[['last_name','first_name', 'count']]
     
     return [
         customers.to_dict('records'),
