@@ -1,0 +1,5 @@
+train:  C:\Users\Charlie Lee\workspace\2024\2024-05-29\datasets\train
+test:  C:\Users\Charlie Lee\workspace\2024\2024-05-29\datasets\test
+val:  C:\Users\Charlie Lee\workspace\2024\2024-05-29\datasets\valid
+nc: 3
+names: [Mask, NoMask, Incorrect]
