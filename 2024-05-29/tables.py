@@ -46,12 +46,14 @@ def update(last_name):
     groups = filtered_orders.groupby('customer_id').size().reset_index()
     groups.columns = ['customer_id', 'count']
     order_count = pd.merge(left=groups, right=all_customers, on='customer_id')[['last_name','first_name', 'count']]
+    order_count['name'] = order_count['first_name'] + ' ' + order_count['last_name']
+
     
     return [
         customers.to_dict('records'),
         filtered_orders.to_dict('records'),
         all_customers.last_name,
-        px.bar(groups),
+        px.bar(x=groups['name'], y=groups['count']),
     ]
 
 app.run(debug=True)
