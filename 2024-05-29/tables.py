@@ -9,8 +9,7 @@ app = Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 app.layout = [
     dbc.Row(children=[
         dcc.Dropdown(
-            id='dropdown'
-            options=[], multi=True),
+            id='dropdown', options=[], multi=True),
         dbc.Col(
             children=dash_table.DataTable(id='customers'),
         ),
@@ -27,7 +26,7 @@ app.layout = [
         Output(component_id='orders', component_property='data'),
     ],
     [
-        Input(component_id='customers', component_property='style'),
+        Input(component_id='dropdown', component_property='value'),
     ]
 )
 def update(_):
