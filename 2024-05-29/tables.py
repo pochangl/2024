@@ -23,7 +23,9 @@ app.layout = [
         Output(component_id='customers', component_property='data'),
         Output(component_id='orders', component_property='data'),
     ],
-    []
+    [
+        Input(componnet_id='customers', component_property='style'),
+    ]
 )
 def update():
     ## https://raw.githubusercontent.com/pochangl/2024/main/2024-05-08/customers.csv
