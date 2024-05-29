@@ -9,7 +9,7 @@ data = pd.read_csv('customers.csv')
 
 print(data)
 app.layout = [
-     dash_table.DataTable(data=data)
+     dash_table.DataTable(data=data.to_dict('records'))
 ]
 
 app.run(debug=True)
