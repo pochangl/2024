@@ -54,7 +54,7 @@ def update(last_name):
         customers.to_dict('records'),
         filtered_orders.to_dict('records'),
         all_customers.last_name,
-        px.bar(order_count[['name', 'count']]),
+        px.bar(order_count, 'name', 'count'),
     ]
 
 app.run(debug=True)
