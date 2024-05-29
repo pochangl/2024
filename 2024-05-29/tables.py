@@ -35,6 +35,7 @@ def update(last_name):
     all_customers = pd.read_csv('customers.csv')[['customer_id', 'first_name', 'last_name']]
     print(all_customers['last_name'] == last_name)
     customers = all_customers[all_customers['last_name'] == last_name]
+    print(last_name)
 
     ## https://raw.githubusercontent.com/pochangl/2024/main/2024-05-08/orders.csv
     orders = pd.read_csv('orders.csv')[['order_id', 'customer_id', 'order_date']]
