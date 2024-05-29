@@ -12,7 +12,7 @@ customers = pd.read_csv('customers.csv')[['customer_id', 'first_name', 'last_nam
 orders = pd.read_csv('orders.csv')
 
 app.layout = [
-    dbc.Row(childdren=[
+    dbc.Row(children=[
         dbc.Col(children='left'),
         dbc.Col(children='right'),
     ]),
