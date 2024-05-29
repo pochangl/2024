@@ -8,7 +8,7 @@ app = Dash()
 data = pd.read_csv('customers.csv')
 
 app.layout = [
-    dash_table.DataTable(data),
+     dash_table
 ]
 
 app.run(debug=True)
