@@ -37,6 +37,8 @@ def update(last_name):
 
     ## https://raw.githubusercontent.com/pochangl/2024/main/2024-05-08/orders.csv
     orders = pd.read_csv('orders.csv')[['order_id', 'customer_id', 'order_date']]
-    return customers.to_dict('records'), orders.to_dict('records'), all_customers.last_name
+
+    filtered_orders = pd.merge(left=customers, right=orders, on='customer_id')
+    return customers.to_dict('records'), filtered_orders.to_dict('records'), all_customers.last_name
 
 app.run(debug=True)
