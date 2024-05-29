@@ -5,23 +5,29 @@ import pandas as pd
 
 app = Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
-## https://raw.githubusercontent.com/pochangl/2024/main/2024-05-08/customers.csv
-customers = pd.read_csv('customers.csv')[['customer_id', 'first_name', 'last_name']]
-
-## https://raw.githubusercontent.com/pochangl/2024/main/2024-05-08/orders.csv
-orders = pd.read_csv('orders.csv')[['order_id', 'customer_id', 'order_date']]
 
 app.layout = [
     dbc.Row(children=[
         dbc.Col(
+            id='customers',
             children=dash_table.DataTable(data=customers.to_dict('records')),
         ),
         dbc.Col(
+            id='orders',
             children=dash_table.DataTable(data=orders.to_dict('records')),
         ),
     ]),
-     
-     
 ]
+
+
+@app.callback()
+def update()
+        
+    ## https://raw.githubusercontent.com/pochangl/2024/main/2024-05-08/customers.csv
+    customers = pd.read_csv('customers.csv')[['customer_id', 'first_name', 'last_name']]
+
+    ## https://raw.githubusercontent.com/pochangl/2024/main/2024-05-08/orders.csv
+    orders = pd.read_csv('orders.csv')[['order_id', 'customer_id', 'order_date']]
+    return customers, orders
 
 app.run(debug=True)
