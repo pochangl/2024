@@ -2,6 +2,7 @@ from dash import Dash, html, dash_table, Input, Output, dcc
 import dash_bootstrap_components as dbc
 
 import pandas as pd
+import plotly.express as px
 
 app = Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
@@ -26,6 +27,7 @@ app.layout = [
         Output(component_id='customers', component_property='data'),
         Output(component_id='orders', component_property='data'),
         Output(component_id='dropdown', component_property='options'),
+        Output(component_id='graph', component_property='figure'),
     ],
     [
         Input(component_id='dropdown', component_property='value'),
