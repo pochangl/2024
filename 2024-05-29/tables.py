@@ -3,7 +3,7 @@ import dash_bootstrap_components as dbc
 
 import pandas as pd
 
-app = Dash()
+app = Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 ## https://raw.githubusercontent.com/pochangl/2024/main/2024-05-08/customers.csv
 customers = pd.read_csv('customers.csv')[['customer_id', 'first_name', 'last_name', 'phone', 'email']]
