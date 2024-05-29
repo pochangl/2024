@@ -14,6 +14,7 @@ orders = pd.read_csv('orders.csv')
 app.layout = [
     dbc.Row(children=[
         dbc.Col(
+            style="padding: 10px",
             children=dash_table.DataTable(data=customers.to_dict('records')),
             xs=4,
         ),
