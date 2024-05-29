@@ -9,20 +9,19 @@ app = Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 app.layout = [
     dbc.Row(children=[
         dbc.Col(
-            id='customers',
-            children=dash_table.DataTable(data=customers.to_dict('records')),
+            children=dash_table.DataTable(id='customers'),
         ),
         dbc.Col(
-            id='orders',
-            children=dash_table.DataTable(data=orders.to_dict('records')),
+            children=dash_table.DataTable(id='orders'),
         ),
     ]),
 ]
 
 
-@app.callback()
-def update()
+@app.callback(
         
+)
+def update():
     ## https://raw.githubusercontent.com/pochangl/2024/main/2024-05-08/customers.csv
     customers = pd.read_csv('customers.csv')[['customer_id', 'first_name', 'last_name']]
 
