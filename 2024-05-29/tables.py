@@ -43,7 +43,12 @@ def update(last_name):
 
     filtered_orders = pd.merge(left=customers, right=orders, on='customer_id')
 
-    filtered_orders.groupby('customer_id')
-    return customers.to_dict('records'), filtered_orders.to_dict('records'), all_customers.last_name
+    groups = filtered_orders.groupby('customer_id')
+    return [
+        customers.to_dict('records'),
+        filtered_orders.to_dict('records'),
+        all_customers.last_name,
+        px.line(groups),
+    ]
 
 app.run(debug=True)
