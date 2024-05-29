@@ -12,6 +12,10 @@ customers = pd.read_csv('customers.csv')[['customer_id', 'first_name', 'last_nam
 orders = pd.read_csv('orders.csv')
 
 app.layout = [
+    dbc.Row(childdren=[
+        dbc.Col(children='left'),
+        dbc.Col(children='right'),
+    ]),
      dash_table.DataTable(data=customers.to_dict('records')),
      dash_table.DataTable(data=orders.to_dict('records')),
 ]
