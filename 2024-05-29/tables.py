@@ -49,7 +49,6 @@ def update(last_name):
     order_count = order_count[['last_name','first_name', 'count']]
     order_count['name'] = order_count['first_name'] + ' ' + order_count['last_name']
 
-    print(order_count['name'])
     return [
         customers.to_dict('records'),
         filtered_orders.to_dict('records'),
