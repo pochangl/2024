@@ -33,6 +33,6 @@ def update(_):
 
     ## https://raw.githubusercontent.com/pochangl/2024/main/2024-05-08/orders.csv
     orders = pd.read_csv('orders.csv')[['order_id', 'customer_id', 'order_date']]
-    return customers, orders
+    return customers.to_dict('records'), orders.to_dict('records')
 
 app.run(debug=True)
