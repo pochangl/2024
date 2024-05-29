@@ -14,15 +14,10 @@ orders = pd.read_csv('orders.csv')[['order_id', 'customer_id', 'order_date']]
 app.layout = [
     dbc.Row(children=[
         dbc.Col(
-            style={'padding-right': '20px'},
             children=dash_table.DataTable(data=customers.to_dict('records')),
-            xs=5,
         ),
-        dbc.Col(xs=1),
         dbc.Col(
-            style={'padding': '20px'},
             children=dash_table.DataTable(data=orders.to_dict('records')),
-            xs=6,
         ),
     ]),
      
