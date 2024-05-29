@@ -17,6 +17,7 @@ app.layout = [
             children=dash_table.DataTable(id='orders'),
         ),
     ]),
+    dcc.Graph(id='graph', figure=None),
 ]
 
 
