@@ -1,4 +1,4 @@
-from dash import Dash, html
+from dash import Dash, html, dash_table
 
 import pandas as pd
 
@@ -8,7 +8,7 @@ app = Dash()
 data = pd.read_csv('customers.csv')
 
 app.layout = [
-    html.Div(children='Hello world')
+    dash_table.DataTable(data),
 ]
 
 app.run(debug=True)
