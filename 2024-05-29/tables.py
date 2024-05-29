@@ -15,11 +15,9 @@ app.layout = [
     dbc.Row(children=[
         dbc.Col(
             children=dash_table.DataTable(data=customers.to_dict('records')),
-            xs=4,
         ),
         dbc.Col(
             children=dash_table.DataTable(data=orders.to_dict('records')),
-            xs=8,
         ),
     ]),
      
