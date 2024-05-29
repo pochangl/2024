@@ -24,6 +24,7 @@ app.layout = [
     [
         Output(component_id='customers', component_property='data'),
         Output(component_id='orders', component_property='data'),
+        Output(component_id='dropdown', component_property='options'),
     ],
     [
         Input(component_id='dropdown', component_property='value'),
@@ -35,6 +36,6 @@ def update(_):
 
     ## https://raw.githubusercontent.com/pochangl/2024/main/2024-05-08/orders.csv
     orders = pd.read_csv('orders.csv')[['order_id', 'customer_id', 'order_date']]
-    return customers.to_dict('records'), orders.to_dict('records')
+    return customers.to_dict('records'), orders.to_dict('records'), customers.first_name
 
 app.run(debug=True)
