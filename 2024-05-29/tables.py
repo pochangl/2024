@@ -7,8 +7,8 @@ app = Dash(external_stylesheets=[dbc.themes.BOOTSTRAP])
 
 
 app.layout = [
-        dcc.Dropdown(
-            id='dropdown', options=[], value='', style={'margin': '12px'}),
+    dcc.Dropdown(
+        id='dropdown', options=[], value='', style={'margin': '12px'}),
     dbc.Row(children=[
         dbc.Col(
             children=dash_table.DataTable(id='customers'),
