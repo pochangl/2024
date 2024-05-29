@@ -53,7 +53,7 @@ def update(last_name):
         customers.to_dict('records'),
         filtered_orders.to_dict('records'),
         all_customers.last_name,
-        px.bar(x=groups['name'], y=groups['count']),
+        px.bar(x=order_count['name'], y=order_count['count']),
     ]
 
 app.run(debug=True)
