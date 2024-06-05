@@ -25,7 +25,10 @@ def onFilter(text: str):
     filter1 = customers['last_name'].str.contains(text)
     filter2 = customers['first_name'].str.contains(text)
     print(customers.info())
-    filter3 = customers['customer_id'].str.contains(text)
+    try:
+        filter3 = customers['customer_id'] == int(text)
+    except ValueError:
+        filter3 = True
     customers = customers[filter1 | filter2 | filter3]
     data = customers.to_dict('records')
     return [data]
