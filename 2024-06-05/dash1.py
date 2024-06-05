@@ -20,6 +20,7 @@ app.layout = html.Div(
 ])
 def onFilter(filter: str):
     customers = pd.read_csv('customers.csv')
-    return [customers.to_dict('records')]
+    data = customers.to_dict('records')
+    return [data]
         
 app.run(debug=True)
