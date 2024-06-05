@@ -18,7 +18,7 @@ app.layout = html.Div(
 [
     Input(component_id='filter', component_property='value'),
 ])
-def onFilter(filter):
+def onFilter(filter: str):
     customers = pd.read_csv('customers.csv')
     return [customers.to_dict('records')]
         
