@@ -11,5 +11,6 @@ app.layout = html.Div(
     ]
 )
 
+# 把 read_csv 跟 datatable data 的部份放到 callback 裡
         
 app.run(debug=True)
