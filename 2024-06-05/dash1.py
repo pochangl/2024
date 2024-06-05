@@ -20,6 +20,9 @@ app.layout = html.Div(
 ])
 def onFilter(filter: str):
     customers = pd.read_csv('customers.csv')
+
+    filter1 = filter in customers['last_name']
+    customers = customers[filter1]
     data = customers.to_dict('records')
     return [data]
         
