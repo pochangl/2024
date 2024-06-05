@@ -25,7 +25,7 @@ def onFilter(text: str):
     filter1 = customers['last_name'].str.contains(text)
     filter2 = customers['first_name'].str.contains(text)
     filter3 = customers['customer_id'].str.contains(text)
-    print(customers.mode())
+    print(customers.info())
     customers = customers[filter1 | filter2 | filter3]
     data = customers.to_dict('records')
     return [data]
