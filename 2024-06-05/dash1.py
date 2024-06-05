@@ -23,7 +23,8 @@ def onFilter(text: str):
 
     # 把 last_name 抽出來, 然後每個比對看有沒有包含 text 的字串
     filter1 = customers['last_name'].str.contains(text)
-    customers = customers[filter1]
+    filter2 = customers['first_name'].str.contains(text)
+    customers = customers[filter1 | filter2]
     data = customers.to_dict('records')
     return [data]
         
