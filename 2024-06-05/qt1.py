@@ -1,4 +1,4 @@
-from PyQt6 import QApplication
+from PyQt6.QtWidget import QApplication, QMainWindow
 
 app = QApplication()
 
