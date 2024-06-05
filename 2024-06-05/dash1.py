@@ -21,7 +21,7 @@ app.layout = html.Div(
 def onFilter(text: str):
     customers = pd.read_csv('customers.csv')
 
-    # 把 last_name 抽出來, 然後每個比對看有沒有包含 filter 的字串
+    # 把 last_name 抽出來, 然後每個比對看有沒有包含 text 的字串
     filter1 = customers['last_name'].str.contains(text)
     customers = customers[filter1]
     data = customers.to_dict('records')
