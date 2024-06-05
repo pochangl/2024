@@ -6,8 +6,8 @@ customers = pd.read_csv('customers.csv')
 app = Dash()
 app.layout = html.Div(
     children=[
-        dcc.Input(),
-        dash_table.DataTable(customers.to_dict('records')),
+        dcc.Input(id='filter', placeholder='請輸入您想尋找的資料'),
+        dash_table.DataTable(id='datatable', customers.to_dict('records')),
     ]
 )
 
