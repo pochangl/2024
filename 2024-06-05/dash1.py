@@ -21,7 +21,7 @@ app.layout = html.Div(
 def onFilter(filter: str):
     customers = pd.read_csv('customers.csv')
 
-    filter1 = customers['last_name'].contains(filter)
+    filter1 = customers['last_name'].str.contains(filter)
     customers = customers[filter1]
     data = customers.to_dict('records')
     return [data]
