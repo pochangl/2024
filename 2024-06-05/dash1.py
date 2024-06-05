@@ -24,7 +24,6 @@ def onFilter(text: str):
     # 把 last_name 抽出來, 然後每個比對看有沒有包含 text 的字串
     filter1 = customers['last_name'].str.contains(text)
     filter2 = customers['first_name'].str.contains(text)
-    print(customers.info())
     try:
         filter3 = customers['customer_id'] == int(text)
     except ValueError:
