@@ -6,6 +6,7 @@ customers = pd.read_csv('customers.csv')
 app = Dash()
 app.layout = html.Div(
     children=[
+        dcc.Input(),
         dash_table.DataTable(customers.to_dict('records')),
     ]
 )
