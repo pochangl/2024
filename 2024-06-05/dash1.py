@@ -12,10 +12,12 @@ app.layout = html.Div(
 )
 
 # 把 read_csv 跟 datatable data 的部份放到 callback 裡
-@app.callback([
-    [
-        Input(component_id='filter', component_property='value'),
-    ]
+@app.callback(
+[
+    Output(component_id='datatable', component_property='data'),
+],
+[
+    Input(component_id='filter', component_property='value'),
 ])
         
 app.run(debug=True)
