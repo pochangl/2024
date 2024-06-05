@@ -6,5 +6,4 @@ customers = pd.read_csv('customers.csv')
 app = Dash()
 app.layout = dash_table.DataTable()
 
-
 app.run(debug=True)
