@@ -7,7 +7,7 @@ app = Dash()
 app.layout = html.Div(
     children=[
         dcc.Input(id='filter', placeholder='請輸入您想尋找的資料'),
-        dash_table.DataTable(id='datatable', customers.to_dict('records')),
+        dash_table.DataTable(id='datatable', data=customers.to_dict('records')),
     ]
 )
 
